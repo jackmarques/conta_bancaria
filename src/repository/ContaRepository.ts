@@ -3,6 +3,7 @@ import { Conta } from "../model/Conta";
 export interface ContaRepository {
     
     // CRUD da Conta
+    // assinatura do método
     procurarPorNumero(numero: number): void;
     listarTodas(): void;
     cadastrar(conta: Conta): void;
@@ -12,5 +13,5 @@ export interface ContaRepository {
     // Métodos Bancários
     sacar(numero: number, valor: number): void;
     depositar(numero: number, valor: number): void;
-    transferir(numeroOrigem: number, numeroDestino: number): void;
+    transferir(numeroOrigem: number, numeroDestino: number, valor: number): void;
 }
